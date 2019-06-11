@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SpielBibliothek - {{ title }}</title>
+</head>
+<body>
+    <div>
+        <h1>{{ title }}</h1>
+        <table border="1" width="100%" style="border-collapse: collapse">
+            <thead>
+                <th>Game</th>
+                <th>Category</th>
+                <th>Plataform</th>
+            </thead>
+            <tbody>
+                {% for game in games %}
+                    <tr>
+                        <td>{{ game.name }}</td>
+                        <td>{{ game.category }}</td>
+                        <td>{{ game.plataform }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
