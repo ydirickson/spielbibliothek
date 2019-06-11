@@ -22,7 +22,7 @@ def index():
 def game_form():
     return render_template('form.html', title='New Game')
 
-@app.route('/new-game')
+@app.route('/new-game', methods=['POST',])
 def new_game():
     name = request.form['name']
     category = request.form['category']
